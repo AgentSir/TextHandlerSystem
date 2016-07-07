@@ -1,0 +1,29 @@
+<?xml  version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:jaxws="http://cxf.apache.org/jaxws"
+       xmlns:security="http://www.springframework.org/schema/security"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+        http://cxf.apache.org/jaxws
+        http://cxf.apache.org/schemas/jaxws.xsd
+        http://cxf.apache.org/configuration/security
+        http://cxf.apache.org/schemas/configuration/security.xsd
+        http://www.springframework.org/schema/security
+        http://www.springframework.org/schema/spring-security-3.0.xsd">
+
+    <!--Turn on the @Annotation-based configuration-->
+    <context:annotation-config />
+
+    <!-- Packages where will be find bean-components(@Component, @Service)  -->
+    <context:component-scan base-package="ua.suputilov.texthandlersystem.web" />
+    <context:component-scan base-package="ua.suputilov.texthandlersystem.dao.impl" />
+    <context:component-scan base-package="ua.suputilov.texthandlersystem.dao" />
+    <context:component-scan base-package="ua.suputilov.texthandlersystem" />
+    <context:component-scan base-package="ua.suputilov.texthandlersystem.model" />
+
+    <!-- (Data Access Resources) -->
+    <import resource="data.xml" />
+
+</beans>
