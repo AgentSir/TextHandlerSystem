@@ -27,6 +27,14 @@ Dependencies:
 
 MySQL DB "text_files" with created two tables "file_statement" and "file_statement_breakdown". There is the script is called "MySQL_script" in the repository that be able to create them.
 
+Build:
+
+Make maven command: "package".
+
+Run:
+
+Deploy built war archive on application server.
+
 
 
 
